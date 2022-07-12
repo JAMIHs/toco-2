@@ -1,0 +1,639 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{box-sizing: border-box;
+	list-style: none;
+text-decoration: none;
+}
+
+ul {
+	padding: 0;
+}
+
+body{font-family: 'NanumSquareRound'; position: relative; font-weight: 500;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		list-style-type: none;
+	}
+button{outline: none;}
+br{opacity: 0;}
+
+.topBtn{position: fixed; z-index: 99999; bottom: 7%; right: 5%; display: flex; flex-direction: column; align-items: center;}
+.topBtn p{font-weight: 500; font-size: 16px; color: #a3a3a3;}
+button.move{border-radius: 50%; border: 2px solid #a3a3a3; background: white; cursor: pointer; margin-bottom: 5px;}
+button.move i{padding: 5px; font-size: 32px;}
+
+.header{width: 100%; height: 830px; z-index: 9999; position: relative; background: url(./resoft_image/헤더배경.png) no-repeat; background-repeat: round; padding-top: 30px;} /*헤더 배경 */
+.header .banner-wrap{height: 100%; max-width: 1400px; margin: 0 auto; position: relative;}
+.header .banner-wrap .img-wrap{position: absolute; right: 0; top: 9%;}
+.header .bannerText-wrap{color: #f8f8f8; position: absolute; top: 25%; word-break: normal;}
+.header .bannerText-wrap button{color: #f8f8f8; font-weight: 600; font-size: 20px; padding: 10px 25px; background: #ffffff2b; cursor: pointer; border: 1px solid;}
+.header .bannerText-wrap button:hover{background: transparent}
+.header .bannerText{padding-bottom: 80px;}
+.header .bannerText p:first-child{font-size: 50px; font-weight: 600; line-height: 60px;}
+.header .bannerText p:last-child {font-weight: 500; line-height: 20px;}
+.header .bannerText p:last-child span:nth-child(3){display: block;}
+.wrapper{max-width:100%; position: relative;}
+.wrapper .top_wrap > a , .wrapper #gnb_m > a{position: absolute; height: 71px;}
+.wrapper .top_wrap > a img{left: 170px; position: absolute; padding: 14px; height: 44px;}
+.wrapper .top_wrap > a .header_logo{width: 71px;}
+.wrapper .top_wrap > a .header_logo_text{width: 150px; margin-left: 15px;}
+.wrapper .top_wrap{max-width:1400px; margin:0 auto; position: relative;z-index: -1;height: 100%;}
+.wrapper .top_wrap .img-wrap{display: block; height: auto; position: absolute; top: 25%; padding-left: 15px;}
+.wrapper .top_wrap .img-wrap img{width: 240px;}
+
+.back.flip-item {
+	text-align: center;
+	line-height: 30px;
+	width: 100%;
+	position: relative;
+ }
+
+ .app-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	font-family: 'ypseo';
+	text-align: center;
+	color: #ffffff;
+ }
+
+ .layoutImg {
+	display: block;
+	background: rgba(20, 21, 22, 0.445);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin-bottom: -350px;
+ }
+
+
+.b_wrap .busi_content_wrap .business_list .flip:first-child img{width: 170px;}
+
+.b_wrap{padding: 200px 0; overflow: hidden;}
+.b_wrap .busi_content_wrap {max-width: 1400px; margin: 0 auto;}
+.b_wrap .business_list {width: 100%; display: flex;}
+.b_wrap .business_list li a {display: block; position: relative; text-align: center; height: 100%; transition: box-shadow .2s;}
+.b_wrap .business_list li a .title {font-size: 23px; margin: 10px 0; font-weight: 500; color: #2e2e2e;}
+.subTitleEng {text-transform: uppercase; text-align: center; color: #ee72d8; font-weight: 600; font-size: 15px; letter-spacing: 3px;}
+.b_wrap .business_list li a .img_wrap{position: relative; width: 100%; height: 185px}
+.b_wrap .business_list li a .img_wrap img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px;}
+.b_wrap .busi_content_wrap .business_list .flip:first-child img{width: 140px;}
+
+.b_wrap .business_list .flip{box-sizing: border-box; cursor: pointer; width: calc(100% / 4 - 3%); height: 350px; position: relative; margin: 0 1.5%;}
+.b_wrap .business_list .flip .flip-item{backface-visibility: hidden; background: #f6f6f6; transition: 1s; width: 100%; height: 100%;}
+.b_wrap .business_list .flip .front{position: absolute; backface-visibility: hidden; transition: 1s; transform: rotateY(0deg);}
+.b_wrap .business_list .flip .front a{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.b_wrap .business_list .flip .back {transform: rotateY(-180deg);display: flex; align-items: center; justify-content: space-between;flex-direction: column; }
+.b_wrap .business_list .flip:hover .front{transform: rotateY(180deg);}
+.b_wrap .business_list .flip:hover .back{transform: rotateY(0deg); }
+
+
+
+.proj-center{
+	text-align: center;
+	background-color: #f8f8f8;
+	padding: 55px 0 125px 0;
+}
+
+/*프로젝트 타이틀 */
+.proj-center h1 {
+	color: #04088a;
+	font-size: 2.5rem;
+	font-weight:bolder;
+}
+
+.proj-center h4 {
+	color: #ee72d8;
+	letter-spacing: 0.25rem;
+	margin-top: -1.2rem;
+	margin-bottom: 4rem;
+}
+
+/* slick 부분 */
+.proj-box-wrapper {
+	max-width: 1400px;
+	margin: 0px auto;
+}
+
+.proj-center .proj-box-wrapper .proj-box{
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.proj-center .proj-box-wrapper .proj-box .proj-cont{
+	font-size: 1.25rem;
+	font-weight: 600;
+	width: 254px;
+	height: 200px;
+	margin: auto;
+	top: 9%;
+	position: relative;
+ 
+}
+.proj-center .proj-box-wrapper .proj-box p {   
+	padding: 0px 20px 0px 20px;
+	height: auto;
+	word-break: keep-all;
+	text-align: left;
+}
+
+.proj-center .proj-box-wrapper .proj-box img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 40%;
+	transition: transform 0.3s ease-in-out;
+	transform: scale(0.9);
+}
+
+.proj-center .proj-box-wrapper .proj-box:hover img {
+	transform: scale(1);
+}
+
+
+
+
+/*구 모양 이미지? 왜 있을까요??*/
+.cus_wrap {
+	/* background: url(./resoft-image/web.png) no-repeat;  */
+	max-width: 1400px; 
+	height: 1100px; 
+	margin: 0 auto; 
+	display: block; 
+	margin-top: 60px; 
+	margin-bottom: 250px; 
+	position: relative; 
+	background-position: center;
+} 
+/*에코스봇 위치*/
+.cus_wrap .ecoce-bot{
+	position: absolute; 
+	top: 5%; 
+	right: 0; 
+	width: 740px;
+}
+/*탄소중립기본법 배너*/
+.cus_wrap .ministry-Environ-img{
+	position: absolute; 
+	right: 0; 
+	top: 290px; 
+	width: 350px;
+}
+/*스마트폰 그림*/
+.cus_wrap .ecoce-img-wrap{
+	position: relative; 
+	height: 100%;
+	top: 160px;
+	width: 960px;
+}
+.cus_wrap .ecoce-img-wrap .ecoce-img{
+	position: absolute; 
+	left: 0; 
+	width: 100%;
+}
+/*우측 하단 문구*/
+.cus_wrap .eco-clean-earth{
+	position: absolute; 
+	right: 0; 
+	top: 830px; 
+	text-align: right; 
+	line-height: 45px; 
+	margin-top: 50px;
+}
+/*우측 하단 문구 : 첫 <p>태그 폰트 사이즈*/
+.cus_wrap .eco-clean-earth p:first-child{
+	font-size: 40px; 
+	font-weight: 600;
+}
+/*우측 하단 문구 : 마지막 <p>태그 폰트 사이즈*/
+.cus_wrap .eco-clean-earth p:last-child{font-size: 30px;}
+
+
+/* 로고부분 */
+.box_wrap{width: 100%; background: #04088a; overflow: hidden; box-sizing: border-box; height: 300px;}
+.box_wrap .img_btn{position: relative; height: 100%; max-width: 1400px; margin: 0 auto;}
+.box_wrap img{position: absolute; bottom: 0;}
+.box_wrap .box_btn{position: absolute; display: flex; gap: 15px; right: 0; bottom: 15%;}
+.box_wrap .box_btn button{font-size: 15px; font-weight: 600; border: none; width: 185px; height: 50px;}
+.box_wrap .box_btn button:first-child a{color: #ee72d8;}
+.box_wrap .box_btn button:last-child a{color: white;}
+
+/* 고객사 */
+.clients-img-wrap{text-align: center; max-width: 1400px; margin: 150px auto;}
+.clients-img-wrap ul{display: flex; flex-wrap: wrap;}
+.clients-img-wrap ul li{color: #a3a3a3; font-size: 18px; width: calc(100% / 9); margin-bottom: 50px; display: flex; flex-direction: column; align-items: center;}
+.clients-img-wrap ul li .img-wrap{width: 120px; position: relative; height: 120px; border: 3px solid #dddddd; border-radius: 50%;}
+.clients-img-wrap ul li img{max-width: 100%; padding: 20px; margin-bottom: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)}
+.clients-img-wrap ul li .sm-img{max-width: 90%;}
+.clients-img-wrap ul li .lg-img{max-width: 110%;}
+.clients-img-wrap ul li .lg-img-width{width: 90%;}
+.clients-img-wrap ul li p{font-size: 16px; padding-top: 15px; word-break: break-all}
+.clients-img-wrap .load{background: transparent; cursor: pointer; border: none; display: none;}
+.clients-img-wrap .load i{font-size: 80px; color:#04088a;}
+
+/* -------------------지도 -----------------*/			
+
+.indexKakaoMap{
+	width:65%;
+	height:45vw;
+	max-width:1400px;
+}			
+.map-wrap{
+	margin:200px;
+	display:flex;
+	gap:90px;
+}
+.map-wrap .map-info-wrap{
+	display:flex;
+	gap:35px;
+	flex-direction:column;
+	font-size:18px;
+	margin-top:75px;
+}
+.map-wrap .map-info-wrap .map-info a p,
+.map-info-wrap .map-info p:last-child{
+	color:#7b7b7b;				
+}
+.map-info p:first-child{
+	font-weight:600;							
+	margin-bottom:15px;
+	color:black;
+}
+
+/* -----------------푸터 -----------------*/
+footer{	
+	display:block;			
+	clear:both;
+	width:100%;				
+	position:relative;							
+}
+.footer_wrap{								
+	background-image:url("./resoft_image/footer2.png");
+	background-size:cover;				
+}
+.footer_wrap{				
+	margin:0 auto;
+	padding:80px 40px;
+	display:flex;
+}			
+.footer_wrap > div{
+	margin-left:250px;
+}
+.footer_wrap .footer_content{
+	margin-left:3%;
+	width:85%;
+	display:inline-block;
+}
+.footer_wrap .footer_content_wht{
+	color:white;
+	font-size:19px;
+	margin-top:0;
+	margin-bottom:10px;
+}
+.footer_wrap .footer_content .footer_info_wrap{
+	color:#b9b9b9;
+	line-height:25px;
+}			
+.footer_wrap .footer_info{
+	display:flex;
+	flex-wrap:wrap;
+}
+.footer_wrap .footer_info p{
+	margin:0;
+	width: calc(100% / 2);
+}	
+.footer_wrap .copyright{
+	color:#828282;				
+}
+.footer_wrap .footer_info_wrap p a{
+	color:#b9b9b9;
+}
+
+
+/*동적 화면 크기 조절*/
+@media screen and (max-width:1500px) {
+	.header .bannerText-wrap{ padding-left: 2%;}
+	.header .banner-wrap .img-wrap{padding-right: 2%;}
+	/* 명환씨파트 */
+	.cus_wrap{height: 60vw;}
+	.cus_wrap .ecoce-bot {top: 5%; width: 53%; right: 2%;}
+	.cus_wrap .ministry-Environ-img{top: 30%; width: 25%; right: 2%;}
+	.cus_wrap .ecoce-img-wrap{top: 20%; width: 69%; left: 2%;}
+	.cus_wrap .eco-clean-earth{top: 90%; right: 2%}
+
+	/* 유진씨파트 */
+	.box_wrap img{left: 2%;}
+	.box_wrap .box_btn{right: 2%;}
+
+	.clients-img-wrap{margin: 130px auto;}
+	.clients-img-wrap ul{margin: 0 2%;}
+}
+
+/* 1300px 기준, 지도의 크기 변화 */
+@media screen and (max-width:1300px){
+	.indexKakaoMap{
+		height:585px;
+	}
+	.map-wrap{
+		gap:50px;
+		margin:200px 50px;
+	}
+	.marp-wrap .map-info-wrap{
+		width:40%;
+	}
+}
+
+/* 푸터 로고 옆의 마진 제거 (기본 250px) */
+@media screen and (max-width :1299px){
+	.footer_wrap > div{
+		margin-left:0;
+	}
+}
+
+@media screen and (max-width:1217px) {
+	/* 인홍씨파트 */
+	.header .bannerText p:first-child{font-size: 45px;}
+	.header .banner-wrap .img-wrap{top: 11%;}
+	.header .banner-wrap .img-wrap img{padding-top: 80px;}
+	.header .bannerText p:last-child span:last-child{display: block;}
+	.header .bannerText p:last-child span:nth-child(2),
+	.header .bannerText p:last-child span:last-child span:last-child {display: block;}
+
+	/* 순정씨 파트 */
+	/* slick 부분 */
+	.proj-center .proj-box-wrapper .proj-box .proj-cont{
+		width: 200px;
+	}
+	
+	.proj-center .proj-box-wrapper .proj-box p {   
+		padding: 0px 20px 0px 23px;
+	}
+	
+	.proj-center .proj-box-wrapper .proj-box img {
+		width: 100%;
+		height: auto;
+		top: 55%;
+	}
+
+	/* 명환씨파트 */
+	.cus_wrap .eco-clean-earth p:first-child{font-size: 30px;}
+	.cus_wrap .eco-clean-earth p:last-child{font-size: 25px;}
+
+	/* 유진씨파트 */
+	.box_wrap .box_btn{bottom: 10%;}
+	.box_wrap{height: 250px;}
+	.box_wrap img{width: 50%;}
+
+    .clients-img-wrap ul li{width: calc(100% / 8);}
+    .clients-img-wrap ul li .img-wrap{width: 10vw; height: 10vw;}
+    .clients-img-wrap ul{margin: 0 5%;}
+    .clients-img-wrap .load{display: initial;}
+
+	/* 제민씨파트 */
+	.indexKakaoMap{
+		height:650px;
+	}
+}	
+
+
+@media screen and (max-width: 940px){
+	/* 인홍씨파트 */
+	.header{height: 1000px; background: url(./resoft_image/헤더배경940.png) no-repeat; background-position-x: right;}
+	.header .bannerText{padding-bottom: 50px;}
+	.header .bannerText p:first-child{font-size: 36px; line-height: 45px; padding-top: 60px;}
+	.header .bannerText-wrap{top: 45%;}
+	.header .banner-wrap .img-wrap{left: 50%; right: 0; top: 0; transform: translateX(-50%); width: 500px;}
+	.header .banner-wrap .img-wrap img{width: 100%;}
+	.wrapper .top_wrap{display: inline;}
+	.wrapper .top_wrap>a img{ position: unset;}
+	.wrapper .top_wrap .img-wrap img {height: 30px; width: 150px;}
+
+
+	.b_wrap .business_list .flip{height: 300px;}
+	.b_wrap{padding: 100px 0;}
+	.b_wrap .business_list{flex-wrap: wrap;}
+	.b_wrap .business_list .flip{width: calc(100% / 2 - 4%); margin: 2%;}
+
+
+
+	/* 순정씨 파트 */
+    /*프로젝트 타이틀 */
+    .proj-center h1 {
+         color: #04088a;
+        font-size: 1.5rem;
+        font-weight:bolder;  
+    }
+
+    .proj-center .proj-box-wrapper .proj-box p {   
+        padding: 0px 20px 0px 25px;
+    }
+
+    .proj-center .proj-box-wrapper .proj-box img {
+        width: 100%;
+        height: auto;
+        top: 55%;
+    }
+
+	/* 명환씨파트 */
+	.cus_wrap{height: auto; margin: 60px 2%;}
+	.cus_wrap .ecoce-bot{width: 75%; position: unset;}
+	.cus_wrap .ministry-Environ-img{display: none;}
+	.cus_wrap .ecoce-img-wrap .ecoce-img{position: unset;}
+	.cus_wrap .ecoce-img-wrap{width: 85%; height: auto; margin: 0 auto; margin-top: 65px; margin-bottom: 30px;}
+	.cus_wrap .eco-clean-earth{margin: 0; position: unset;}
+
+	/* 유진씨파트 */
+    .box_wrap{height: 400px; text-align: center;}
+	.box_wrap img{width: 60%; position:unset; margin: 70px 0;}
+	.box_wrap .box_btn{position: unset; flex-direction: column; align-items: center;}
+    .box_wrap .box_btn button{width: 60%;}
+	
+    .clients-img-wrap ul{max-width: 500px; margin: 0 auto;}
+	.clients-img-wrap ul li{width: calc(100% / 4 - 6%); margin: 0 3% 30px 3%;}
+	.clients-img-wrap ul li .img-wrap{width: 110px; height: 110px;}
+	.clients-img-wrap .load i{font-size: 70px;}
+
+	/* 제민씨 푸터 */
+	.footer_wrap .footer_content_wht,
+	.footer_wrap .copyright{
+		font-size:16px;
+	}
+	.footer_wrap .footer_info_wrap .footer_info{
+		font-size:14px;
+	}
+}	
+
+@media screen and (max-width: 767px){
+	/* 사업영역 */
+	.main{width: 100%; margin: 0px auto 0;}
+	.b_wrap{max-width: 100%; margin: 0 auto; height: auto; padding: 40px 0;}
+	.b_wrap .busi_content_wrap {padding: 60px 20px;}
+	.news_wrap {padding: 100px 20px 40px 20px; box-sizing: border-box; height: auto;}
+	.new_body .cate {font-size: 14px;}
+	.new_body .news_tit {font-size: 16px;}
+}
+
+@media screen and (max-width: 640px){
+	/* 인홍씨파트 */
+	.header .banner-wrap .img-wrap{width: 400px;}
+	.header{height: 800px;}
+	.header .bannerText{padding-left: 50px;}
+
+   
+	/* 주형씨파트 */
+	.b_wrap .business_list .flip{height: 250px;}
+	.b_wrap .business_list li a .img_wrap{height: 125px;}
+	.b_wrap .business_list li a .img_wrap img{width: 80px;}
+	.b_wrap .busi_content_wrap .business_list .flip:first-child img{width: 135px;}
+	.b_wrap .business_list li a .title{font-size: 20px; }
+
+
+	/* 명환씨파트 */
+	.cus_wrap .eco-clean-earth{line-height: 35px;}
+	.cus_wrap .eco-clean-earth p:first-child{font-size: 28px;}
+	.cus_wrap .eco-clean-earth p:last-child{font-size: 22px;}
+	.cus_wrap .ecoce-bot{width: 95%;}
+	.cus_wrap .ecoce-img-wrap{margin-top: 40px; }
+	/* 제민씨파트 
+	지도와 글의 위치변화, 글의 배치2줄로 변화 */
+	body{
+		overflow-x:hidden;
+		max-width:640px;
+	}
+	.indexKakaoMap{
+		width:90%;
+		height:600px;
+	}				
+	.map-wrap{
+		flex-direction:column-reverse;
+		margin:0;
+		margin-bottom:300px;
+		align-items:center;
+	}
+	.map-wrap .map-info-wrap{
+		flex-wrap:wrap;
+		flex-direction:row;
+		margin:0;
+		gap:0;
+		width:90%;
+	}
+	.map-wrap .map-info-wrap .map-info{
+		width: calc(100% / 2);
+		margin-bottom:50px;
+	}
+	.map-wrap .map-info p:last-child{
+		font-size:15px;
+	}
+	/* 푸터 로고의 위치변화, 글의 배치 변화*/
+	.footer_wrap{
+		display:block;	
+		padding:40px;				
+	}
+	.footer_wrap .img-wrap{
+		text-align:center;
+		margin-bottom:20px;
+	}
+	.footer_wrap .img-wrap img{
+		width:30%;
+		height:auto;
+		float:none;
+	}
+	.footer-wrap .footer_info{
+		flex-direction:column;
+	}					
+	.footer_wrap .footer_content{
+		margin:0 0 0 28px;				
+	}					
+	.footer_wrap .footer_info p{
+		width:100%;
+		line-height:17px;
+	}		
+
+}
+
+/* 유진씨파트 */
+@media screen and (max-width: 500px) {
+	.clients-img-wrap ul li .img-wrap{width: 22vw; height: 22vw;}
+}
+
+@media screen and (max-width: 430px){
+	/* 인홍씨파트 */
+	.header{height: 640px;}
+	.header .bannerText p:first-child{font-size: 24px; line-height: 30px; padding-bottom: 22px;}
+	.header .bannerText p:last-child{line-height: 17px; font-size: 15px;}
+	.header .bannerText{padding-bottom: 25px;}
+	.header .bannerText-wrap button{padding: 8px 20px; font-size: 15px;}
+	.header .banner-wrap .img-wrap{width: 300px;}
+	
+	.b_wrap .business_list li a .title{font-size: 20px;}
+	.b_wrap .business_list .flip{width: 100%; height: 250px;}
+	.b_wrap .busi_content_wrap .flip:first-child li img{width: 130px !important;}
+
+	/* 순정씨파트 */
+	.proj-center h4 {
+        margin-bottom: 2rem;
+    }
+    /* slick 부분 */
+    .proj-center .proj-box-wrapper .proj-box {
+        margin: 30px;
+    }
+
+    .proj-center .proj-box-wrapper .proj-box .proj-cont{
+        width: 254px;
+    }
+
+    .proj-center .proj-box-wrapper .proj-box img {
+        width: 100%;
+        height: auto;
+        top: 40%;
+    }
+
+	/* 명환씨파트 */
+	.cus_wrap .cus_content > h3{font-size: 30px;}
+	.cus_wrap .cus_content > p{font-size: 22px;}
+	.cus_wrap .eco-clean-earth p:first-child{font-size: 22px; line-height: 22px;}
+	.cus_wrap .eco-clean-earth p:last-child{font-size: 20px;}
+	/* 유진씨파트 */
+	.box_wrap img{margin: 53px 0;}
+	.box_wrap{height: 320px;}
+
+    .clients-img-wrap ul li p{font-size: 14px;}
+    .clients-img-wrap ul li img{padding: 12px;}
+
+	/* 제민씨파트  지도의 크기 변화 및, 글의 배치 1줄로 변경*/
+	.map-wrap .map-info-wrap{
+		flex-direction:column;
+	}
+	.map-wrap .map-info-wrap .map-info{
+		width:100%;
+		margin-bottom:23px;
+	}
+	.map-wrap .map-info-wrap .map-info>p:first-child{
+		margin-bottom:7px;
+	}
+
+	/* 푸터 글자의 크기, 로고이미지의 크기 변화*/
+	.footer_wrap{
+		padding:30px 15px;
+	}
+	.footer_wrap .img-wrap img{
+		width:130px;
+		height:auto;
+	}
+}
+
